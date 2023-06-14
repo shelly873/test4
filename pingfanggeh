@@ -1,0 +1,16 @@
+import math
+
+# 定义二次方程    
+f = lambda x: math.sqrt(1 + 3*x**2) - 2*x
+
+# 求解方程    
+x_roots = []    
+for i in range(100):    
+    # 尝试求解方程    
+    x_val = [math.sqrt(-i/2), math.sqrt(i/2)]    
+    if f(x_val) == 0:    
+        x_roots.append(x_val[0])    
+        break  
+
+# 打印结果    
+print("二次方程的解为:", x_roots)  
